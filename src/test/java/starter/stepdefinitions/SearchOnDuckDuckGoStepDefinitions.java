@@ -9,6 +9,7 @@ import starter.search.SearchFor;
 import starter.search.SearchResult;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static starter.TextMatcher.textOf;
 
 public class SearchOnDuckDuckGoStepDefinitions {
 
@@ -34,10 +35,7 @@ public class SearchOnDuckDuckGoStepDefinitions {
     @Then("all the result titles should contain the word {string}")
     public void all_the_result_titles_should_contain_the_word(String term) {
         assertThat(searchResult.titles())
-                .matches(
-                        results -> results.size() > 0)
-                .allMatch(
-                        title -> title.toLowerCase().contains(term.toLowerCase())
-        );
+                .matches(results -> results.size() > 0)
+                .allMatch(title -> textOf(title).matchesIgnoringCase(term));
     }
 }
