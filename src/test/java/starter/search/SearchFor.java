@@ -1,6 +1,5 @@
 package starter.search;
 
-import net.serenitybdd.core.steps.UIInteractionSteps;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;

@@ -28,7 +28,7 @@ public class SearchOnDuckDuckGoStepDefinitions {
         theActorCalled(actor).attemptsTo(NavigateTo.theDuckDuckGoHomePage());
     }
 
-    @When("(he|she) searches for {string}")
+    @When("she/he searches for {string}")
     public void search_for(String term) {
         theActorInTheSpotlight().attemptsTo( SearchFor.term(term) );
     }
