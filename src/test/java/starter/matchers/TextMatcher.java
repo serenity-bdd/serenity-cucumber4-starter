@@ -1,4 +1,4 @@
-package starter;
+package starter.matchers;
 
 public class TextMatcher {
     private String text;
@@ -11,7 +11,7 @@ public class TextMatcher {
         return new TextMatcher(text);
     }
 
-    public boolean matchesIgnoringCase(String expectedText) {
-        return text.equalsIgnoreCase(expectedText);
+    public boolean containsIgnoringCase(String expectedText) {
+        return text.toLowerCase().contains(expectedText.toLowerCase());
     }
 }

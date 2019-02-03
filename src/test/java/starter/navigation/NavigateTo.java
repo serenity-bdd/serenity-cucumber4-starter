@@ -1,9 +1,8 @@
 package starter.navigation;
 
-import net.serenitybdd.core.steps.UIInteractionSteps;
 import net.thucydides.core.annotations.Step;
 
-public class NavigateTo extends UIInteractionSteps {
+public class NavigateTo {
 
     DuckDuckGoHomePage duckDuckGoHomePage;
 
