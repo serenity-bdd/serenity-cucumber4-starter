@@ -14,7 +14,7 @@ public class StringContainsIgnoringCase extends SubstringMatcher {
     }
 
     protected String relationship() {
-        return "containing ignoring case";
+        return "containing";
     }
 
     @Factory

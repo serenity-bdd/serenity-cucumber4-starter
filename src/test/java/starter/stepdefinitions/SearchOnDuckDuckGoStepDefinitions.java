@@ -36,8 +36,10 @@ public class SearchOnDuckDuckGoStepDefinitions {
     @Then("all the result titles should contain the word {string}")
     public void all_the_result_titles_should_contain_the_word(String term) {
         theActorInTheSpotlight().should(
-                seeThat(SearchResult.titles(), hasSize(greaterThan(0))),
-                seeThat(SearchResult.titles(), everyItem(containsStringIgnoringCase(term)))
+                seeThat("search result titles",
+                        SearchResult.titles(), hasSize(greaterThan(0))),
+                seeThat("search result titles",
+                        SearchResult.titles(), everyItem(containsStringIgnoringCase(term)))
         );
     }
 }
