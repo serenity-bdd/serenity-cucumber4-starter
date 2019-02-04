@@ -25,9 +25,17 @@ The project has build scripts for both Maven and Gradle, and follows the standar
 src
   + main
   + test
-    + java                        Test runners and supporting code
+    + java                          Test runners and supporting code
     + resources
-      + features                  Feature files     + search                  Feature file subdirectories         search_by_keyword.feature    + webdriver                 Bundled webdriver binaries     + linux     + mac     + windows        chromedriver.exe       OS-specific Webdriver binaries        geckodriver.exe
+      + features                    Feature files
+        + search                    Feature file subdirectories 
+          search_by_keyword.feature  
+      + webdriver                   Bundled webdriver binaries
+        + linux
+        + mac
+        + windows
+          chromedriver.exe          OS-specific Webdriver binaries
+          geckodriver.exe
 
 ```
 
