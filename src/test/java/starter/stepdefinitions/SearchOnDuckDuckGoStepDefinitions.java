@@ -14,7 +14,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.*;
-import static starter.matchers.StringContainsIgnoringCase.containsStringIgnoringCase;
+import static starter.matchers.StringContainsIgnoringCase.containsIgnoringCase;
 
 public class SearchOnDuckDuckGoStepDefinitions {
 
@@ -39,7 +39,7 @@ public class SearchOnDuckDuckGoStepDefinitions {
                 seeThat("search result titles",
                         SearchResult.titles(), hasSize(greaterThan(0))),
                 seeThat("search result titles",
-                        SearchResult.titles(), everyItem(containsStringIgnoringCase(term)))
+                        SearchResult.titles(), everyItem(containsIgnoringCase(term)))
         );
     }
 }

@@ -18,7 +18,7 @@ public class StringContainsIgnoringCase extends SubstringMatcher {
     }
 
     @Factory
-    public static Matcher<String> containsStringIgnoringCase(String substring) {
+    public static Matcher<String> containsIgnoringCase(String substring) {
         return new StringContainsIgnoringCase(substring);
     }
 }
