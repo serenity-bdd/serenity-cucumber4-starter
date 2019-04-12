@@ -1,9 +1,12 @@
 package starter.stepdefinitions;
 
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import org.assertj.core.api.Condition;
+import org.junit.Assume;
 import starter.navigation.NavigateTo;
 import starter.search.SearchFor;
 import starter.search.SearchResult;
@@ -27,15 +30,14 @@ public class SearchOnDuckDuckGoStepDefinitions {
         navigateTo.theDuckDuckGoHomePage();
     }
 
-    @When("he/she searches for {string}")
+    @When("^s?he (?:searches|has searched) for \"(.*)\"")
     public void i_search_for(String term) {
         searchFor.term(term);
     }
 
     @Then("all the result titles should contain the word {string}")
-    public void all_the_result_titles_should_contain_the_word(String term) {
+    public void all_the_result_titles_should_contain_the_word(String expectedTerm) {
         assertThat(searchResult.titles())
-                .matches(results -> results.size() > 0)
-                .allMatch(title -> textOf(title).containsIgnoringCase(term));
+                .allMatch(title -> textOf(title).containsIgnoringCase(expectedTerm));
     }
 }

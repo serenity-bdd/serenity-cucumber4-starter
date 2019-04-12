@@ -11,6 +11,7 @@ public class SearchResult extends UIInteractionSteps {
         return findAll(SearchResultList.RESULT_TITLES)
                 .stream()
                 .map(WebElementFacade::getTextContent)
+                .filter(text -> !text.equalsIgnoreCase("Ad"))
                 .collect(Collectors.toList());
     }
 }
