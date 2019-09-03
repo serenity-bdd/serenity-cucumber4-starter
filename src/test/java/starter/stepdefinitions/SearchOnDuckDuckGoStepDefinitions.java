@@ -35,6 +35,12 @@ public class SearchOnDuckDuckGoStepDefinitions {
         searchFor.term(term);
     }
 
+
+    @When("^s?he (?:searches|has searched) again for \"(.*)\"")
+    public void i_search_again_for(String term) {
+        searchFor.termOnSearchResultsPage(term);
+    }
+
     @Then("all the result titles should contain the word {string}")
     public void all_the_result_titles_should_contain_the_word(String expectedTerm) {
         assertThat(searchResult.titles())

@@ -4,10 +4,3 @@ Feature: Research things on the web
     Given Sergey is on the DuckDuckGo home page
     When he searches for "Duck"
     Then all the result titles should contain the word "Duck"
-
-  @manual
-  Scenario: Researching a thing by hand
-    Given Sergey is on the DuckDuckGo home page
-    And he has searched for "Cucumber"
-    When he searches for "zucchini"
-    Then all the result titles should contain the word "zucchini"

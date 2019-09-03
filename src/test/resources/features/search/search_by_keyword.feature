@@ -8,5 +8,5 @@ Feature: Search by keyword
   Scenario: Refining a search using two terms
     Given Sergey is on the DuckDuckGo home page
     And he has searched for "Cucumber"
-    When he searches for "zucchini"
+    When he searches again for "zucchini"
     Then all the result titles should contain the word "zucchini"
