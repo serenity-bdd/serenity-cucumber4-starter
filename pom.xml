@@ -11,8 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>2.0.70</serenity.version>
-        <serenity.maven.version>2.0.70</serenity.maven.version>
+        <serenity.version>2.0.81</serenity.version>
+        <serenity.maven.version>2.0.81</serenity.maven.version>
         <serenity.cucumber.version>1.0.21</serenity.cucumber.version>
         <cucumber.version>4.2.0</cucumber.version>
         <encoding>UTF-8</encoding>
@@ -169,6 +169,13 @@
                 <configuration>
                   <tags>${tags}</tags>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.serenity-bdd</groupId>
+                        <artifactId>serenity-core</artifactId>
+                        <version>${serenity.version}</version>
+                    </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <id>serenity-reports</id>
