@@ -299,11 +299,11 @@ To run the sample project, you can either just run the `CucumberTestSuite` test 
 
 By default, the tests will run using Chrome. You can run them in Firefox by overriding the `driver` system property, e.g.
 ```json
-$ mvn clean verify -Ddriver=firefox
+$ mvn clean verify -Dwebdriver.driver=firefox
 ```
 Or 
 ```json
-$ gradle clean test -Pdriver=firefox
+$ gradle clean test -Pwebdriver.driver=firefox
 ```
 
 The test results will be recorded in the `target/site/serenity` directory.
