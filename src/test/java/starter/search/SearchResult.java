@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.TextContent;
 
 import java.util.Collection;
-import java.util.List;
 
 public class SearchResult {
     public static Question<Collection<String>> titles() {
