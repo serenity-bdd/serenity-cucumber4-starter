@@ -1,11 +1,11 @@
 ext{
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '2.0.81'
-    serenityCucumberVersion = '1.0.21'
+    serenityCoreVersion = '2.0.91'
+    serenityCucumberVersion = '1.0.30'
     junitVersion='4.12'
     assertJVersion='3.8.0'
     logbackVersion='1.2.3'
-    cucumberVersion = '4.2.0'
+    cucumberVersion = '4.8.0'
 
     libs = [
             slf4jApi: "org.slf4j:slf4j-api:$slf4jVersion",
