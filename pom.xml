@@ -46,7 +46,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.0.13</version>
+            <version>1.2.0</version>
         </dependency>
         <!--
           - To use Cucumber 4, exclude the old Cucumber 2 cucumber-core dependency from the serenity-core dependency
